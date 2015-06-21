@@ -1,10 +1,9 @@
 ---
 title: "Readme.md"
 subtitle: Getting and Cleanning Data Course Project
-output: html_document
 ---
 
-The script run_analysis.r was created to execute the different tasks involved in order to generated the two tidy data sets required in the project's instructions.
+The script run_analysis.R was created to execute the different tasks involved in order to generated the two tidy data sets required in the project's instructions.
 
 Project Instructions
 -------------------------------------------------------
@@ -30,8 +29,6 @@ Script explanation
 
 1. Load files - The following files are loaded into memory:
 
-* mean.std.vector - A vector with mean and std column names to be used to create a subset.
-
 TEST
 The following data frames are created:
 
@@ -41,36 +38,33 @@ The following data frames are created:
 
 TRAIN
 The following data frames are created:
-* x 
-* y
-* sub
+* x_train 
+* y_train
+* sub_train
 
-2. Combine subject, activity and features data into a test and training data frame using the data.frame function.
-* data 
+2. Combine subject, activity and features data into a test and training
 
 ###First objective
 3. Merges the training and the test sets to create one data set.
-* combined_data
-
-4. Remove unwanted columns keeping mean and stds ones.
-* tidyDataSet
-
-5. Prepare column names.
-Iterate mean.std.vector and do a column bind using the column name, subject and activity.
+* sub
+* x
+* y
+* data
 
 ###Second objective
-6. Extracts only the measurements on the mean and standard deviation for each measurement.
+4. Extracts only the measurements on the mean and standard deviation for each measurement.
+* x
 
 ###Third objective
-7. Appropriately labels the data set with descriptive variable names.
-8. Assign col names.
+5. Uses descriptive activity names to name the activities in the data set
 
-###Fourth objective
-9. Uses descriptive activity names to name the activities in the data set
-10. Exports first tidy data set to file system
+
+###Four objective
+5. Appropriately labels the data set with descriptive variable names.
+6. Exports first tidy data set to file system "merged_data.txt"
 
 ##Create second tidy data set
-11. Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-Create a copy of the first tidy data structure. Then iterate the first data set, tidyDataSet, and insert into new data set the average of features for for each activity by subject. The result will data frame of 180 observations and 68 variables.
+7. Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+Create a copy of the first tidy data structure. Then iterate the first data set, "merged_data.txt", and insert into new data set the average of features for for each activity by subject. The result will data frame of 180 observations and 68 variables.
 
-12. Exports second tidy data set to file system with the average of each variable for each activity and each subject.
+8. Exports second tidy data set to file system with the average of each variable for each activity and each subject.
