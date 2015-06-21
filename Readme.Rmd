@@ -21,13 +21,13 @@ Instructions for running the script
 
 1. Set the working directory to the root the directory that contains the unpacked folders from the zip file: getdata-projectfiles-UCI HAR Dataset.zip. For example: setwd("~/Documents/Coursera/Getting and Cleaning Data") were the folder "Getting and Cleaning Data" contains the data folder: UCI HAR Dataset.
 2. Run the code: source('~/Documents/Coursera/Getting and Cleaning Data/run_analysis.R', echo=TRUE). This will execute the script. You could also load the code and simply execute by entering: run_analysis in the console.
-
+3. Load library(data.table)
 
 Script explanation
 -------------------------------------------------------
 ##Read data and create first tidy data set.
 
-1. Load files - The following files are loaded into memory:
+- Load files - The following files are loaded into memory:
 
 TEST
 The following data frames are created:
@@ -42,29 +42,29 @@ The following data frames are created:
 * y_train
 * sub_train
 
-2. Combine subject, activity and features data into a test and training
+- Combine subject, activity and features data into a test and training
 
 ###First objective
-3. Merges the training and the test sets to create one data set.
+- Merges the training and the test sets to create one data set.
 * sub
 * x
 * y
 * data
 
 ###Second objective
-4. Extracts only the measurements on the mean and standard deviation for each measurement.
+Extracts only the measurements on the mean and standard deviation for each measurement.
 * x
 
 ###Third objective
-5. Uses descriptive activity names to name the activities in the data set
+- Uses descriptive activity names to name the activities in the data set
 
 
 ###Four objective
-5. Appropriately labels the data set with descriptive variable names.
-6. Exports first tidy data set to file system "merged_data.txt"
+- Appropriately labels the data set with descriptive variable names.
+- Exports first tidy data set to file system "merged_data.txt"
 
 ##Create second tidy data set
-7. Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-Create a copy of the first tidy data structure. Then iterate the first data set, "merged_data.txt", and insert into new data set the average of features for for each activity by subject. The result will data frame of 180 observations and 68 variables.
+- Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+- Create a copy of the first tidy data structure. Then iterate the first data set, "merged_data.txt", and insert into new data set the average of features for for each activity by subject. The result will data frame of 180 observations and 68 variables.
 
-8. Exports second tidy data set to file system with the average of each variable for each activity and each subject.
+- Exports second tidy data set to file system with the average of each variable for each activity and each subject.

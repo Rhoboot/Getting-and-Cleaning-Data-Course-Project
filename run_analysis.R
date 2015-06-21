@@ -20,6 +20,7 @@ View(data)
 #Read features
 features<-read.table("./data/UCI HAR Dataset/features.txt")
 #Set names features
+library(data.table)
 setnames(features, names(features), c("featureNum", "featureName"))
 index_features<-grep("mean\\(\\)|std\\(\\)",features[,2])
 x<-x[,index_features]

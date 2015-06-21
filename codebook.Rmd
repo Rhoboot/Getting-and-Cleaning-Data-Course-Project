@@ -6,11 +6,8 @@ output: html_document
 Getting and Cleaning Data Course Project Code Book
 ========================================================
 
-First Tidy Data Set
+Tidy Data Set
 -------------------------------------------------------
-
-File name: summTidyDataSet1.txt
-
 Description: Data frame with 10299 observations and 68 variables that contains features measurements performed by 
 30 different subjects based on 6 different activities.
 
@@ -20,7 +17,7 @@ features.txt.
 2. A test and training data frames were created combining subject, activity and features data files.
 3. A master data frame was created combining test and training data.
 4. A descriptive name was given to subject and activity columns.
-5. An export was performed to save tidy data file in the file system - summTidyDataSet1.txt.
+5. An export was performed to save tidy data file in the file system "merged_data"
 
 ## Column Variables (68)
 1.  Subject (integer) – Identifies the subject or individual. It is a number between 1 and 30 inclusively.
@@ -106,13 +103,13 @@ Feature variables (numeric) – The following lists column names of the 66 diffe
 Second Tidy Data Set with Averages by Activity and Subject
 -------------------------------------------------------
 
-File name: TidyDataSet2-summTidyDataSet2-SumAvg.txt  
+File name: tidy_data.txt  
 
 Description: Data set with 180 observations and 68 variables. This data set is a summary of the first data set were the average of each variable for each activity and each subject was calculated.
 
 ## Transformations
 1. A copy of the first tidy data structure was copied.
-2. An export was performed to save the independent tidy data file in the file system - summTidyDataSet2-SumAvg.txt.
+2. An export was performed to save the independent tidy data file in the file system
 
 ## Column Variables (68)
 1.  Subject (integer) – Identifies the subject or individual. It is a number between 1 and 30 inclusively.
@@ -193,4 +190,3 @@ Feature variables (numeric) – The following lists column names of the 66 diffe
 66.	fBodyBodyGyroMag-std()     
 67.	fBodyBodyGyroJerkMag-mean() 
 68. fBodyBodyGyroJerkMag-std()
-
